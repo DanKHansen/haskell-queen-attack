@@ -1,7 +1,7 @@
 module Queens (boardString, canAttack) where
 
 boardString :: Maybe (Int, Int) -> Maybe (Int, Int) -> String
-boardString qW qB = unlines [unwords [board x y | y <- [0 .. 7]] | x <- [0 .. 7]]
+boardString qW qB = unlines [unwords [board r c | c <- [0 .. 7]] | r <- [0 .. 7]]
   where
     board r c
       | Just (r, c) == qW = "W"
